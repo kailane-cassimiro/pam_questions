@@ -10,7 +10,7 @@
 
 #define CONFIG_DIR ".pam_question" 
 #define CONFIG_FILE "config" 
-#define MAX_LINE 256 
+#define MAX_LINE 128 
 #define MAX_ANSWER 128 
 
 // Remove o \\n no final da string 
@@ -19,7 +19,7 @@ void trim_newline(char *str) {
 
     size_t len = strlen(str); 
 
-    if (len > 0 && str[len - 1] == '\\n') str[len - 1] = '\\0'; 
+    if (len > 0 && str[len - 1] == '\n') str[len - 1] = '\0'; 
 
 } 
 
@@ -139,7 +139,7 @@ int write_question_file(const char *filepath, const char *pergunta, const char *
 
     if (!file) return -1; 
 
-    fprintf(file, "pergunta=%s\\nresposta=%s\\n", pergunta, resposta); 
+    fprintf(file, "pergunta=%s\nresposta=%s\n", pergunta, resposta); 
 
     fclose(file); 
 
