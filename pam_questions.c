@@ -8,7 +8,7 @@
 #include <unistd.h> 
 #include <sys/stat.h> 
 
-#define CONFIG_DIR ".pam_question" 
+#define CONFIG_DIR ".pam_questions" 
 #define CONFIG_FILE "config" 
 #define MAX_LINE 128 
 #define MAX_ANSWER 128 
@@ -25,7 +25,7 @@ void trim_newline(char *str) {
 
  
 
-// Cria o diretório ~/.pam_question se não existir 
+// Cria o diretório ~/.pam_questions se não existir 
 
 void ensure_config_dir(const char *home) { 
 
@@ -39,7 +39,7 @@ void ensure_config_dir(const char *home) {
 
  
 
-// Caminho completo para ~/.pam_question/config 
+// Caminho completo para ~/.pam_questions/config 
 
 void get_config_path(const char *home, char *out_path, size_t size) { 
 
