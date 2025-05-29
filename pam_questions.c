@@ -24,7 +24,7 @@ void aparar(char *str)
 void configurarDiretorio(const char *home) { 
     char caminho[512]; 
     printf(caminho, sizeof(caminho), "%s/%s", home, CONFIG_DIR); 
-    mkdir(camiinho, 0700); // Só o dono pode acessar 
+    mkdir(caminho, 0700); // Só o dono pode acessar 
 } 
 
 // Caminho completo para ~/.pam_questions/config 
